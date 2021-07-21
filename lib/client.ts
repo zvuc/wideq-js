@@ -9,6 +9,7 @@ import { LangPackProduct } from './core/lang-pack-product';
 import { ModelInfo } from './core/model-info';
 import { Session } from './core/session';
 import { ACDevice } from './devices/ac';
+import { AirPurifierDevice } from './devices/airpurifier';
 import { DehumidifierDevice } from './devices/dehumidifier';
 import { DishwasherDevice } from './devices/dishwasher';
 import { DryerDevice } from './devices/dryer';
@@ -175,6 +176,8 @@ export class Client {
     switch (deviceInfo.data.deviceType) {
       case DeviceType.AC:
         return new ACDevice(this, deviceInfo);
+      case DeviceType.AIR_PURIFIER:
+        return new AirPurifierDevice(this, deviceInfo);
       case DeviceType.DEHUMIDIFIER:
         return new DehumidifierDevice(this, deviceInfo);
       case DeviceType.DISHWASHER:

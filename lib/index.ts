@@ -8,6 +8,7 @@ export * from './core/model-info';
 export * from './core/monitor';
 export * from './core/session';
 export * from './devices/ac';
+export * from './devices/airpurifier';
 export * from './devices/dehumidifier';
 export * from './devices/dishwasher';
 export * from './devices/dryer';
